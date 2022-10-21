@@ -1,0 +1,11 @@
+{
+    "name": "Control Activity Name",
+    "description": "description",
+    "type": "<ActivityType>",
+    "typeProperties":
+    {
+    },
+    "dependsOn":
+    {
+    }
+}
