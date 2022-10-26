@@ -35,6 +35,9 @@
 		"ade009AzureBlobStorage_connectionString": {
 			"value": ""
 		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
 		"AmazonS31_properties_typeProperties_accessKeyId": {
 			"value": "rQQQq+8hiT+eGcNGUBXBsEGF+nldxHhFuoIAJUztL0jIFNO8ubxHO6+b997HKZaAZmdSzdEpI/4j+AStaPeC8g=="
 		},

@@ -47,6 +47,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ade009AzureBlobStorage'"
 		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
 		"AmazonS31_properties_typeProperties_accessKeyId": {
 			"type": "string",
 			"defaultValue": "rQQQq+8hiT+eGcNGUBXBsEGF+nldxHhFuoIAJUztL0jIFNO8ubxHO6+b997HKZaAZmdSzdEpI/4j+AStaPeC8g=="
@@ -131,6 +135,9 @@
 					},
 					"ade009AzureBlobStorage_connectionString": {
 						"value": "[parameters('ade009AzureBlobStorage_connectionString')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
 					"AmazonS31_properties_typeProperties_accessKeyId": {
 						"value": "[parameters('AmazonS31_properties_typeProperties_accessKeyId')]"
