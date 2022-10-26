@@ -1,0 +1,9 @@
+{
+	"name": "ade009datafactory",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "61b84570-19a0-4d38-9555-aacf07ba7b85",
+		"tenantId": "659d133c-014c-4a31-8a8a-b8789e635959"
+	}
+}
