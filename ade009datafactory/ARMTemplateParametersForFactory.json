@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ade009datafactory"
+		},
+		"AmazonS31_secretAccessKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"ade006linkedserviceamazons3_secretAccessKey": {
+			"value": ""
+		},
+		"ade006linkedserviceamazons3b_secretAccessKey": {
+			"value": ""
+		},
+		"ade008BlobStorage_connectionString": {
+			"value": ""
+		},
+		"ade008SqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"ade009AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"AmazonS31_properties_typeProperties_accessKeyId": {
+			"value": "rQQQq+8hiT+eGcNGUBXBsEGF+nldxHhFuoIAJUztL0jIFNO8ubxHO6+b997HKZaAZmdSzdEpI/4j+AStaPeC8g=="
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://ade004storageaccount.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://ade006storageaccountgen2.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://ade009storageaccountgen2.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://Ade006KeyVault.vault.azure.net/"
+		},
+		"ade006linkedserviceamazons3_properties_typeProperties_accessKeyId": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=ade006storageaccountgen2;AccountKey=nmLVxv4K1+FahnH2oAzWSctWdL+y8uXKvr77aPGA5JJJkktWtv3qg1IYBAVa9xiG4ASQAK63f//n+AStwNmdDA==;EndpointSuffix=core.windows.net"
+		},
+		"ade006linkedserviceamazons3b_properties_typeProperties_accessKeyId": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=ade006storageaccountgen2;AccountKey=nmLVxv4K1+FahnH2oAzWSctWdL+y8uXKvr77aPGA5JJJkktWtv3qg1IYBAVa9xiG4ASQAK63f//n+AStwNmdDA==;EndpointSuffix=core.windows.net"
+		}
+	}
+}

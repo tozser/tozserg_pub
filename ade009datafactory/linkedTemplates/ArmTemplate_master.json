@@ -1,0 +1,161 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ade009datafactory"
+		},
+		"AmazonS31_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'AmazonS31'"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3'"
+		},
+		"ade006linkedserviceamazons3_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'ade006linkedserviceamazons3'"
+		},
+		"ade006linkedserviceamazons3b_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'ade006linkedserviceamazons3b'"
+		},
+		"ade008BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ade008BlobStorage'"
+		},
+		"ade008SqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ade008SqlDatabase1'"
+		},
+		"ade009AzureBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ade009AzureBlobStorage'"
+		},
+		"AmazonS31_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "rQQQq+8hiT+eGcNGUBXBsEGF+nldxHhFuoIAJUztL0jIFNO8ubxHO6+b997HKZaAZmdSzdEpI/4j+AStaPeC8g=="
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ade004storageaccount.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ade006storageaccountgen2.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ade009storageaccountgen2.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://Ade006KeyVault.vault.azure.net/"
+		},
+		"ade006linkedserviceamazons3_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "DefaultEndpointsProtocol=https;AccountName=ade006storageaccountgen2;AccountKey=nmLVxv4K1+FahnH2oAzWSctWdL+y8uXKvr77aPGA5JJJkktWtv3qg1IYBAVa9xiG4ASQAK63f//n+AStwNmdDA==;EndpointSuffix=core.windows.net"
+		},
+		"ade006linkedserviceamazons3b_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "DefaultEndpointsProtocol=https;AccountName=ade006storageaccountgen2;AccountKey=nmLVxv4K1+FahnH2oAzWSctWdL+y8uXKvr77aPGA5JJJkktWtv3qg1IYBAVa9xiG4ASQAK63f//n+AStwNmdDA==;EndpointSuffix=core.windows.net"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ade009datafactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AmazonS31_secretAccessKey": {
+						"value": "[parameters('AmazonS31_secretAccessKey')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3_accountKey')]"
+					},
+					"ade006linkedserviceamazons3_secretAccessKey": {
+						"value": "[parameters('ade006linkedserviceamazons3_secretAccessKey')]"
+					},
+					"ade006linkedserviceamazons3b_secretAccessKey": {
+						"value": "[parameters('ade006linkedserviceamazons3b_secretAccessKey')]"
+					},
+					"ade008BlobStorage_connectionString": {
+						"value": "[parameters('ade008BlobStorage_connectionString')]"
+					},
+					"ade008SqlDatabase1_connectionString": {
+						"value": "[parameters('ade008SqlDatabase1_connectionString')]"
+					},
+					"ade009AzureBlobStorage_connectionString": {
+						"value": "[parameters('ade009AzureBlobStorage_connectionString')]"
+					},
+					"AmazonS31_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('AmazonS31_properties_typeProperties_accessKeyId')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"ade006linkedserviceamazons3_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('ade006linkedserviceamazons3_properties_typeProperties_accessKeyId')]"
+					},
+					"ade006linkedserviceamazons3b_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('ade006linkedserviceamazons3b_properties_typeProperties_accessKeyId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
